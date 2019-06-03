@@ -1,4 +1,5 @@
 // variables:
+@import './variables.scss';
 $chuck_norris: RGB(192, 0, 0); 
 $space_purple: 	#591792;
 
@@ -73,4 +74,22 @@ nav{
 
 #pink{
     color: tickleMePink();
+}
+
+@function marginCenter($vertical){
+    @return auto #{$vertical}px;
+}
+
+#margins{
+    margin: marginCenter(100px);
+    background-color: black;
+}
+
+@function superPad($padding){
+    @return calc($padding*10)px;
+}
+
+#padded{
+    color: $imported_yellow;
+    padding: superPad(10);
 }

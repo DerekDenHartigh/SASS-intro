@@ -37,4 +37,14 @@ p {
   color: pink;
 }
 
+#margins {
+  margin: auto 100pxpx;
+  background-color: black;
+}
+
+#padded {
+  color: #FFDF00;
+  padding: calc($padding*10) px;
+}
+
 /*# sourceMappingURL=styles.css.map */
