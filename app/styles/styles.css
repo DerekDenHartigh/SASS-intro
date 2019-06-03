@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   background-color: lightcoral;
   color: darkslateblue;
   align-content: center;
@@ -17,6 +18,11 @@ h1 {
   align-items: center;
   border: solid RGB(192, 0, 0) 5px;
   border-radius: 5px;
+}
+
+p {
+  display: flex;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=styles.css.map */
