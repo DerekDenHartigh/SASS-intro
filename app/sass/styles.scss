@@ -1,3 +1,6 @@
+// variables:
+$chuck_norris: RGB(192, 0, 0); 
+
 body{
     display: flex;
     background-color: lightcoral;
@@ -15,4 +18,22 @@ h1{
     justify-items: center;
     align-content: center;
     align-items: center;
+    border: solid $chuck_norris 5px;
+    border-radius: 5px;
+}
+
+
+// nesting example:
+
+nav{
+    //this styling applies to nav container
+    ul{
+        //this stying only applies to ul w/in nav
+        li{
+            //this styling only applies to list items w/in unordered list, w/in the nav component
+            a{
+                //this styling would only affect the links
+            }
+        }
+    }
 }
