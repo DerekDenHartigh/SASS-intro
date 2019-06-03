@@ -2,4 +2,17 @@ body{
     display: flex;
     background-color: lightcoral;
     color: darkslateblue;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+h1{
+    display: flex;
+    font-size: 3em;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
 }
