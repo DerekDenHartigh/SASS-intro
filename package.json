@@ -10,6 +10,8 @@
   "author": "Derek DenHartigh",
   "license": "ISC",
   "devDependencies": {
-    "gulp-ruby-sass": "^4.0.0"
-  }
+    "gulp-ruby-sass": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {}
 }

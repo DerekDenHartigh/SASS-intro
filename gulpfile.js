@@ -1,6 +1,7 @@
 const sass = require('gulp-ruby-sass');
 const reload = browserSync.reload;
 const gulp = require('gulp');
+const sass = require('gulp-sass')
 
 gulp.task('compileSass', () => {
     return sass('app/sass/*.scss') // which Sass file to grab    
