@@ -1,4 +1,6 @@
 body {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: lightcoral;
@@ -18,11 +20,21 @@ h1 {
   align-items: center;
   border: solid RGB(192, 0, 0) 5px;
   border-radius: 5px;
+  padding: 10px;
 }
 
 p {
+  padding: 5px;
   display: flex;
   font-size: 2em;
+  color: #591792;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: RGB(192, 0, 0);
+}
+
+#pink {
+  color: pink;
 }
 
 /*# sourceMappingURL=styles.css.map */

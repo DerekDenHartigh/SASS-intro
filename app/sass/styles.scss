@@ -1,7 +1,10 @@
 // variables:
 $chuck_norris: RGB(192, 0, 0); 
+$space_purple: 	#591792;
 
 body{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: lightcoral;
@@ -21,11 +24,23 @@ h1{
     align-items: center;
     border: solid $chuck_norris 5px;
     border-radius: 5px;
+    padding: 10px;
 }
 
+//mixins:
+
+@mixin sample-mixin {
+    color: $space_purple;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: $chuck_norris;
+ }
+
 p{
+    padding: 5px;
     display: flex;
     font-size: 2em;
+    @include sample-mixin;
 }
 
 // nesting example:
@@ -42,6 +57,20 @@ nav{
         }
     }
 }
+ 
 
-//mixins:
+@function tickleMePink(){
+    @return pink;
+    /* I could do thinks like light + $color,
+    where color would be my argument
+    then blue would become lightblue */
+}
 
+@function percentageOfBox($size){
+    @return calc(100% - #{size}px);
+    //#{} is the same for SASS what ${} for JS
+}
+
+#pink{
+    color: tickleMePink();
+}
