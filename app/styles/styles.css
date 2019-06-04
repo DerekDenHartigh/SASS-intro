@@ -44,7 +44,7 @@ p {
 
 #padded {
   color: #FFDF00;
-  padding: calc($padding*10) px;
+  padding: 100 px;
 }
 
 /*# sourceMappingURL=styles.css.map */

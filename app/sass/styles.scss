@@ -85,8 +85,8 @@ nav{
     background-color: black;
 }
 
-@function superPad($padding){
-    @return calc($padding*10)px;
+@function superPad($stuffing){
+    @return ($stuffing*10)px;
 }
 
 #padded{
