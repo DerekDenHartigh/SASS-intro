@@ -1,13 +1,19 @@
-const sass = require('gulp-ruby-sass');
-const reload = browserSync.reload;
-const gulp = require('gulp');
-const sass = require('gulp-sass')
-
-gulp.task('compileSass', () => {
-    return sass('app/sass/*.scss') // which Sass file to grab    
-    .pipe(gulp.dest('app/css')) // where to put the compiled stylesheet
-    .pipe(reload({ stream:true })); // if the stylesheet is altered, reload the browser
-});
-
 const browserSync = require("browser-sync");
 const reload = browserSync.reload;
+
+const gulp = require('gulp');
+
+const sass = require('gulp-sass');
+
+gulp.task('compileSass', function () {
+    console.log('compiling...');
+
+    return gulp.src('./sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./app'))
+      .pipe(browserSync.stream());
+});
+   
+gulp.task('compileSassWatch', function () {
+    gulp.watch(['./app/sass/**/*.scss'], gulp.series('compileSass'));
+});
