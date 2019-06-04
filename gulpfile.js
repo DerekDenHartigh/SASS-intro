@@ -8,7 +8,7 @@ const sass = require('gulp-sass');
 gulp.task('compileSass', function () {
     console.log('compiling...');
 
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('./app/sass/styles.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('./app'))
       .pipe(browserSync.stream());
